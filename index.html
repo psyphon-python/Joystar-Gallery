@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JoyStar Gallery - Wii U Edition</title>
+  <!-- Retro pixel font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- Wii U Top Bar / Header -->
+    <header class="container window-card wiiu-topbar">
+      <div class="system-time" id="system-time">12:00</div>
+      <h1>JoyStar Gallery</h1>
+      <p>Welcome to the Digital Grid. Select an artwork to launch.</p>
+    </header>
+
+    <!-- Wii U Menu Grid Container -->
+    <main class="gallery window-card wiiu-main-menu">
+      <div class="menu-header">
+        <h2>Manga Gallery Menu</h2>
+        <button id="sound-toggle" class="wiiu-btn" title="Toggle UI Sounds">🔊 Sound: ON</button>
+      </div>
+      <!-- Dynamic grid populated via script.js -->
+      <div class="grid" id="gallery-grid"></div>
+    </main>
+
+    <!-- Artist Stats Panel -->
+    <footer class="artist-stat window-card">
+      <div class="artist-name">Artist: JoyStar</div>
+      <div class="artist-info">
+        <h3>Artist Statistic</h3>
+        <p>100% energy. 0% battery.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Wii U Style Lightbox Modal -->
+  <div id="lightbox" class="lightbox-overlay" style="display: none;">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="wiiu-close-btn">&times;</button>
+      <img id="lightbox-img" src="" alt="Zoomed Manga Art" />
+      <div id="lightbox-caption">Artwork Title</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
